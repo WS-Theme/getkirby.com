@@ -2,7 +2,7 @@
 
 return function ($page) {
 
-  $recipes = $page->children()->children()->listed()->sortBy('title', 'asc');
+  $recipes = $page->children()->listed()->sortBy('slug', 'asc');
 
   return [
     'categories' => $recipes->pluck('category', ',', true),
