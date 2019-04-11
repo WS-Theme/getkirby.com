@@ -84,6 +84,38 @@ You can set default values for structure fields which will prepopulate the field
         type: email
 ```
 
+If you want to create more than one field with a default value, you can use the following syntax
+
+
+```yaml
+  emails:
+    label: Emails
+    type: structure
+    default:
+      -
+        email: bastian@getkirby.com
+	name: Bastian
+      -
+        email: lukas@getkirby.com
+	name: Lukas
+      -
+        email: nico@getkirby.com
+	name: Nico
+	
+      -
+        email: sonja@getkirby.com
+	name: Sonja
+    fields:
+      email:
+        label: Email
+        type: email
+      name:
+        label: Name
+	type: text
+
+```
+
+
 ## Table columns
 
 You can define the columns that are shown in the table. This is especially useful if you have a lot of fields in your structure and you don't want to show them all on first sight, but still keep them editable. Columns can also change the text alignment, set a custom width and define a before and after text that will be prepended or appended to the value.
